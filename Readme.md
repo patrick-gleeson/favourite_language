@@ -6,3 +6,10 @@ This can be computed by using the GitHub API to fetch all of the user's public G
 Documentation for the GitHub API can be found at http://developer.github.com.
 
 Any programming language and technology (within reason) can be used to complete the test.
+
+# Usage
+`bundle install` then `rspec --format doc` to verify tests and view documentation.
+
+`rubocop` to verify style adherence.
+
+`rails s` then visit `localhost:3000` to view in action.

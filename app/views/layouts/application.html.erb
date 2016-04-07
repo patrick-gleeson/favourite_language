@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FavouriteLanguage</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Favourite Language</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div id="searchbox">
+  <form id="searchform">
+    <input type="text" placeholder="username" id="username" value="<%= @username %>"/>
+    <input type="submit" id="search" value="Get favourite language" />
+  </form>
+</div>
 <%= yield %>
 
 </body>
