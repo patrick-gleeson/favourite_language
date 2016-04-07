@@ -41,5 +41,18 @@ RSpec.describe RepoAnalyzer do
 
       expect(%w(Ruby Java)).to include subject.favourite_language(repo_array)
     end
+
+    it 'handles repos with undefined languages' do
+      repo_array = [
+        { 'language' => 'PHP' },
+        { 'language' => 'Ruby' },
+        { 'language' => 'Ruby' },
+        { 'language' => nil },
+        { 'language' => 'Java' },
+        { 'language' => 'C#' }
+      ]
+
+      expect(subject.favourite_language(repo_array)).to eq 'Ruby'
+    end
   end
 end
